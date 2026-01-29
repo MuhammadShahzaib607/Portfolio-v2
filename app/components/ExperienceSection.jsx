@@ -8,7 +8,7 @@ const experiences = [
     title: "Full Stack Developer",
     company: "Tax Filerz & Co.",
     duration: "Dec 2025 - Present",
-    description: "Sole developer leading the end-to-end development of enterprise-level web solutions. Managed everything from database architecture to cloud hosting and deployment.",
+    description: "Solo developer leading the end-to-end development of enterprise-level web solutions. Managed everything from database architecture to cloud hosting and deployment.",
     skills: ["Next.js", "React", "Node.js", "MongoDB", "Express", "GitHub", "Hostinger"],
     isCurrent: true
   },
