@@ -7,10 +7,11 @@ const SkillsSection = () => {
 
   const skillsData = {
     Frontend: [
-      { name: "HTML/CSS", level: 95 },
+      { name: "HTML/CSS", level: 88 },
       { name: "JavaScript", level: 80 },
       { name: "React JS", level: 80 },
-      { name: "Next.js", level: 55 },
+      { name: "Next.js", level: 68 },
+      { name: "React Native (Expo)", level: 80 },
       { name: "Tailwind CSS", level: 85 },
       { name: "SCSS", level: 90 },
     ],
@@ -21,6 +22,12 @@ const SkillsSection = () => {
       { name: "NoSQL", level: 80 },
       { name: "JWT", level: 88 },
       { name: "Firebase", level: 60 },
+    ],
+    Advanced: [
+      { name: "Redis (Caching)", level: 50 },
+      { name: "AI Integration (Gemini & Groq)", level: 65 },
+      { name: "Cloudinary", level: 75 },
+      { name: "k6 (Basic Load Testing)", level: 45 },
     ],
     Tools: [
       { name: "GitHub", level: 85 },
@@ -85,7 +92,7 @@ const SkillsSection = () => {
               >
                 <div className="flex justify-between items-center mb-3">
                   <span className="text-white font-medium">{skill.name}</span>
-                  <span className="text-purple-400 text-xs font-bold">{skill.level}%</span>
+                  {/* <span className="text-purple-400 text-xs font-bold">{skill.level}%</span> */}
                 </div>
                 
                 {/* Progress Bar Container */}

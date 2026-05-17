@@ -14,7 +14,7 @@ const EducationSection = () => {
     },
     {
       title: "Intermediate (Pre-Engineering)",
-      institution: "College - Hyderabad",
+      institution: "City College - Hyderabad",
       status: "In Progress",
       description: "Developing strong analytical and mathematical problem-solving skills through a rigorous science curriculum.",
       icon: <GraduationCap className="text-purple-400" />

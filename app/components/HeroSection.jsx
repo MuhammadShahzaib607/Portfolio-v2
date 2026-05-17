@@ -4,6 +4,14 @@ import Typewriter from 'typewriter-effect';
 import { motion } from 'framer-motion';
 
 const HeroSection = () => {
+
+const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section id='home' className="relative min-h-screen w-full flex items-center justify-center px-4 md:px-10 overflow-hidden bg-transparent">
       
@@ -71,10 +79,18 @@ const HeroSection = () => {
             transition={{ delay: 1, duration: 0.5 }}
             className="mt-8 flex flex-row items-center gap-5"
           >
-            <button className="px-7 py-2.5 bg-[#4f46e5] hover:bg-[#4338ca] text-white rounded-full font-medium transition-all transform cursor-pointer shadow-lg shadow-indigo-500/20">
-              Contact Me
+            <a
+            href="/Shahzaib-Resume.pdf" 
+  download="Muhammad_Shahzaib_Full_Stack_Developer_Resume.pdf" 
+  className="inline-block"
+            >
+              <button className="px-7 py-2.5 bg-[#4f46e5] hover:bg-[#4338ca] text-white rounded-full font-medium transition-all transform cursor-pointer shadow-lg shadow-indigo-500/20">
+              Download CV
             </button>
-            <button className="px-7 py-2.5 bg-transparent hover:bg-white/5 border border-white/20 text-white rounded-full font-medium transition-all cursor-pointer">
+            </a>
+            <button className="px-7 py-2.5 bg-transparent hover:bg-white/5 border border-white/20 text-white rounded-full font-medium transition-all cursor-pointer"
+            onClick={() => scrollToSection("projects")}
+            >
               View Work
             </button>
           </motion.div>

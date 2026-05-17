@@ -1,32 +1,32 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Lock } from 'lucide-react';
+import { ExternalLink, Github, Lock, Smartphone } from 'lucide-react';
 
 const projects = [
   {
     title: "HealthMate",
     desc: "AI-powered medical assistant that analyzes reports and provides personalized health insights using secure user data systems.",
-    tech: ["React", "SCSS", "Express", "Gemini API", "MongoDB"],
+    tech: ["React.js", "SCSS", "Express.js", "Gemini API", "MongoDB"],
     live: "https://health-mate-frontend-fawn.vercel.app/",
     code: "https://github.com/MuhammadShahzaib607/HealthMate",
     img: "./healthMate.png"
   },
   {
-    title: "Brand Socia",
+    title: "BrandSocia",
     desc: "A premium platform bridging the gap between global brands and influencers for seamless marketing collaborations and growth.",
-    tech: ["Next.js", "Express", "MongoDB", "Tailwind", "Framer Motion"],
+    tech: ["Next.js", "Express.js", "MongoDB", "Tailwind", "Framer Motion"],
     live: "https://brandsocia.com/",
-    code: null, // Private project
+    code: null,
     img: "./brandsocia.png"
   },
   {
-    title: "Smart Friend Furniture",
-    desc: "Feature-rich E-commerce platform with secure checkout, order management, and a dedicated admin panel for product control.",
-    tech: ["React", "SCSS", "Express", "MongoDB"],
-    live: "https://smart-friend-furniture.vercel.app/",
-    code: "https://github.com/MuhammadShahzaib607/smartFriendFurniture",
-    img: "./smartFriendFurniture.png"
+    title: "ApnaGharApniZameen (AGAZ)",
+    desc: "Modern Real Estate application with easy property search, user profiles, and a simple dashboard Screen to manage listings.",
+    tech: ["Expo", "Express.js", "JWT", "Bcrypt", "MongoDB", "cloudinary", "Firebase Authentication"],
+    live: null,
+    code: null,
+    img: "./agaz.png"
   }
 ];
 
@@ -65,7 +65,7 @@ const ProjectsSection = () => {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute top-4 right-4 px-3 py-1 bg-black/60 backdrop-blur-md rounded-full text-[10px] font-bold text-white uppercase tracking-widest border border-white/10">
-                  {project.tech[0] === "Next.js" ? "Full Stack" : "Web App"}
+                  {project.tech[0] === "Next.js" || project.tech[0] === "React.js" ? "Website" : "Application"}
                 </div>
               </div>
 
@@ -90,13 +90,19 @@ const ProjectsSection = () => {
 
                 {/* Links */}
                 <div className="flex items-center gap-6 pt-4 border-t border-white/5">
+                {
+                  project.live ? 
                   <a 
                     href={project.live} 
                     target="_blank" 
                     className="flex items-center gap-2 text-xs font-bold text-white hover:text-purple-400 transition-colors"
                   >
                     <ExternalLink size={14} /> Live Demo
-                  </a>
+                  </a> : 
+                  <span className="flex items-center gap-2 text-xs font-bold text-gray-500 cursor-not-allowed">
+                    <Smartphone size={14} className="text-gray-500" /> Mobile App
+                    </span>
+                  }
                   
                   {project.code ? (
                     <a 
